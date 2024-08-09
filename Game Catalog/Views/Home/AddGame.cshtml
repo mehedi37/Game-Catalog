@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Add Game";
+}
+<h1>Add Some Cool Games</h1> 
+<form method="post">
+    <div class="form-group col-md-6 mb-2">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter the name of the game">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="CoverPic">Cover Picture</label>
+        <input type="text" class="form-control" id="CoverPic" name="CoverPic" placeholder="Enter the URL of the cover picture">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="Description" name="Description" rows="3" placeholder="Enter a description of the game"></textarea>
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="Publisher">Publisher</label>
+        <input type="text" class="form-control" id="Publisher" name="Publisher" placeholder="Enter the publisher of the game">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="Developer">Developer</label>
+        <input type="text" class="form-control" id="DeveloperTeam" name="DeveloperTeam" placeholder="Enter the developer of the game">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="Genre">Genre</label>
+        <input type="text" class="form-control" id="Genre" name="Genre" placeholder="Enter the genre of the game">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" id="Price" name="Price" placeholder="Enter the price of the game">
+    </div>
+    <div class="form-group col-md-6 mb-2">
+        <label for="ReleaseDate">Release Date</label>
+        <input type="date" class="form-control" id="ReleaseDate" name="ReleaseDate">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>

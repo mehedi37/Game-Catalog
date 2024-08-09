@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Games>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Games</h1>
+    <div class="d-flex">
+        @foreach (var game in Model)
+        {
+            <div class="overflow-auto" style="height: 400px">
+                <div class="card m-2" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="@game.CoverPic" class="img-fluid rounded-start h-100" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@game.Name</h5>
+                                <p class="card-text font-monospace">
+                                    <small class="text-muted font-monospace">
+                                        @($"{game.DeveloperTeam}, {game.Publisher}")
+                                    </small>
+                                </p>
+                                <p class="card-text font-monospace">
+                                    <small class="text-muted font-monospace">
+                                        @game.Genre | <small class="text-muted">@game.ReleaseDate.ToShortDateString()</small>
+                                    </small>
+                                </p>
+                                <p class="card-text font-monospace">
+                                    <small class="text-muted">
+                                        @(game.Description.Length > 100 ? $"{game.Description.Trim().Substring(0, 100)} ..." : game.Description)
+                                    </small>
+                                </p>
+                                <p class="card-text font-monospace">
+                                    $@game.Price
+                                </p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
